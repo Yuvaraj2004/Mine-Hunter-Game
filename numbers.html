@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Hunter</title>
+
+    <link rel="stylesheet" href="./numbers.css">
+</head>
+<body>
+    <div class="setup">
+        <!-- Font license: https://fonts.google.com/specimen/Rubik+Gemstones?preview.text=MINE%20HUNTER&query=Rubik -->
+        <!-- Player: https://www.pngegg.com/en/png-zgeha -->
+        <!-- opponent: https://www.pngegg.com/en/png-dlxmh -->
+        <img class="mine-hunter" src="./mineHunter.png" />
+
+        <button class="play-button button" type="button" onclick="manageGame()">
+            <!-- Play button: https://pngtree.com/freepng/game-button-switch-start-game-icon_5321038.html -->
+            <img src="./playButton.png" />
+        </button>
+    </div>
+
+    <div class="game hidden">
+        <div class="board"></div>
+        <div class="obstacles"></div>
+        <div class="treasures"></div>
+        <div class="bushes"></div>
+
+        <div class="player"></div>
+        <div class="computer"></div>
+    </div>
+
+    <div class="game-text hidden">
+        <div class="game-text-left">
+            <div class="round-ui">Current Round: <span>0</span></div>
+            
+            <div class="player-bag">
+                <p>Player score: <span>0</span></p>
+                <div class="bag">
+                    <img class="bag-item bag-item-1" />
+                    <img class="bag-item bag-item-2" />
+                    <img class="bag-item bag-item-3" />
+                </div>
+            </div>
+        </div> 
+
+        <div class="game-text-main">
+            <h1>Game starts in</h1>
+            <p></p>
+        </div> 
+
+        <div class="game-text-right">
+            <button class="exit-button button" onclick="endGame()"> EXIT </button>
+
+            <div class="gem-reward-scores">
+                <p class="scores-head">Gems</p>
+
+                <!-- Gems license: licence folder './gems-license.pdf' -->
+                <div class="gem-reward-scores-container">
+                    <div class="gem-reward-scores-cell">
+                        <img class="" src="./gem1.png" />
+                        <p>Score: 1</p>
+                    </div>
+    
+                    <div class="gem-reward-scores-cell">
+                        <img class="" src="./gem2.png" />
+                        <p>Score: 2</p>
+                    </div>
+    
+                    <div class="gem-reward-scores-cell">
+                        <img class="" src="./gem3.png" />
+                        <p>Score: 3</p>
+                    </div>
+    
+                    <div class="gem-reward-scores-cell">
+                        <img class="" src="./gem4.png" />
+                        <p>Score: 4</p>
+                    </div>
+    
+                    <div class="gem-reward-scores-cell">
+                        <img class="" src="./gem5.png" />
+                        <p>Score: 5</p>
+                    </div>
+    
+                    <div class="gem-reward-scores-cell">
+                        <img class="" src="./gem6.png" />
+                        <p>Score: 6</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="computer-bag">
+                <p>Computer score: <span>0</span></p>
+                <div class="bag">
+                    <img class="bag-item bag-item-1" />
+                    <img class="bag-item bag-item-2" />
+                    <img class="bag-item bag-item-3" />
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="end hidden">
+        <!-- Font license: https://fonts.google.com/specimen/Rubik+Gemstones?preview.text=MINE%20HUNTER&query=Rubik -->
+        <!-- Player: https://www.pngegg.com/en/png-zgeha -->
+        <!-- opponent: https://www.pngegg.com/en/png-dlxmh -->
+        <img class="mine-hunter" src="./mineHunter.png" />
+        <p >You have ended the game</p>
+
+        <button class="end-button button" onclick="playAgain()">
+            <!-- end button: https://www.clker.com/clipart-button-125.html -->
+            <img src="./endButton.png" />
+        </button>
+    </div>
+
+    <div class="popup-overlay hidden">
+        <div class="popup">
+            <p class="message">This is message</p>
+            <button class="pop-button" onclick="closePopup()">Okay</button>
+        </div>
+    </div>
+    <script src="./numbers.js"></script>
+</body>
+</html>
